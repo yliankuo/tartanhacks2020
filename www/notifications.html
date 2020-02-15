@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Skeleton</title>
+    <script src="lib/jquery-2.2.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/md5.js"></script>
+    <script src="lib/fastclick.min.js"></script>
+    <script src="lib/handlebars-v4.0.11.js"></script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+    <script src="js/index.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/localstorage.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+    <link rel="stylesheet" type="text/css" href="css/newscss.css">
+    <!--<link rel="stylesheet" href="css/friendlist.css">-->
+    <!--<h1 style = "font-size:70px; padding-left:80px;">Friends <input type ="image" src="img/addfrend.png", height=75, width=75 onclick="myFunction()" padding-left=800px> </h1>-->
+  </head>
+  <body>
+    <div id="header">
+      <h1>News <input type ="image" style = "vertical-align: middle;" style="float:right;" src="img/redplus.jpg" onclick="addNews()", height=50vh, width=50vh></h1>
+    </div>
+
+  <div id = "newsTable">
+    <table id = "news" class = buttons>
+     <tr><td><button type="button" onclick="showNews1()">news1</button>
+        <tr><td><button type="button" onclick="showNews2()">news2</button>
+        <tr><td><button type="button" onclick="showNews3()">news3</button>
+        <tr><td><button type="button" onclick="showNews4();">news4</button>
+        
+  </table>
+</div>
+
+<br>
+  </body>
+  <script>
+  function addNews(){
+    var table = document.getElementById("news");
+    var person = prompt("Enter News lol:");
+    if (person != null){
+      var row = table.insertRow(0);
+      var cell1 = row.insertCell(0);
+      cell1.innerHTML = "<button type = 'button' onclick = 'showNews()'>"+person+"</button>"
+    
+    }
+  }
+</script>
+  <footer data-position="fixed" data-id="home_1" data-tap-toggle="false">
+    <div data-role="navbar" class="navbar">
+         <ul>
+          <!-- <a href="" class="ui-icon-user ui-btn-icon-notext inlineIcon" data-transition="none"><span class="ui-icon-edit ui-btn-icon-notext inlineIcon"></span>Me</a> -->
+           <li><img src="./img/baseline_person_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <!-- <a href="" data-transition="none"><span class="ui-icon-user ui-btn-icon-notext inlineIcon"></span>Friends</a> -->
+           <li><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/baseline_notifications_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
+         </ul>
+       </div>
+  </footer >
+</html>
