@@ -23,10 +23,6 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="backgroundColor" value="0xffffffff" />
-        <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png" />
-        <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
-        <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
-        <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
