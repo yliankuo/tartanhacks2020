@@ -21,8 +21,8 @@
   </head>
   <body>
 
-    <div id="header">
-      <h1>Friends <input type ="image" style = "vertical-align: middle;" style="float:right;" src="img/redplus.jpg" onclick="addFriend()", height=50vh, width=50vh></h1>
+    <div onclick="mapToggle()" id="header">
+      <h1 onclick="mapToggle()">Friends <input type ="image" style = "vertical-align: middle;" style="float:right;" src="img/redplus.jpg" onclick="addFriend()", height=50vh, width=50vh></h1>
 
       
     </div>
@@ -54,9 +54,10 @@
   </table>
 </div>
 <br>
-    <div id="map" onclick="off()">
+    <div id="mapContainer">
+      <div id="map" onclick="off()">
+      </div>
     </div>
-
   </body>
   
   <footer data-position="fixed" data-id="home_1" data-tap-toggle="false">

@@ -1,6 +1,9 @@
 var friends = {"473251": ["Bort",10,30],"257312":["Alex",20,40], "793541":["Cookie",40,50], "129314":["Aiyana",40,45]}
 var init = false;
 var map;
+
+var mapOn = false;
+
 function addFriend(){
   var table = document.getElementById("friends");
   var code = prompt("Enter Code:");
@@ -21,6 +24,7 @@ function addFriend(){
 }
 
 function on(code){
+  mapOn = true;
   $(".friend").hide();
   var mp = document.getElementById("map")
   map = plugin.google.maps.Map.getMap(mp);
@@ -57,4 +61,11 @@ function on(code){
 function off(){
   $(".friend").show();
   document.getElementById("map").style.display = "none"
+}
+
+function mapToggle() {
+  if(mapOn) {
+    off();
+    mapOn = false;
+  }
 }
