@@ -26,8 +26,8 @@ html {
 h1 {
   color: white;
   margin-left: 15px;
-  /*margin-top: 2.5vh;*/
-  vertical-align: middle;
+  margin-top: 2.5vh;
+  vertical-align: bottom;
 }
 #header {
   background: #851e0c;
@@ -89,9 +89,9 @@ h1 {
 
 
 button {
-  background-color: #9f9f9f;
+  background-color: #ffffff;
   border: none;
-  color:white;
+  color:black;
   padding: 32px 15px;
   text-align: left;
   font-size: 16px;
@@ -103,6 +103,7 @@ button {
   cursor: pointer;
   width: 100%;
   border-spacing:2vh;
+  box-shadow: 4px 4px 5px #aaaaaa;
 }
 
 button:hover {
@@ -113,9 +114,10 @@ button:hover {
   width:100%;
   table-layout: fixed;
   border-collapse:separate;
-  border-spacing:0 4vh;
+  border-spacing:0 1vh;
   padding-left: 2vw;
   padding-right: 2vw;
+  padding-top: 2vw;
 }
 
 #overlay {
