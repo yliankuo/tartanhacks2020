@@ -16,6 +16,9 @@
   font-family: 'Open Sans', Arial, sans-serif !important;
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+  outline: none !important;
 }
 
 html {
@@ -54,7 +57,7 @@ h1 {
 
 
 .navbar {
-  background-color: white;
+  background-color: #f2f2f2;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -104,6 +107,7 @@ button {
   width: 100%;
   border-spacing:2vh;
   box-shadow: 4px 4px 5px #aaaaaa;
+  overflow-y: scroll;
 }
 
 button:hover {
@@ -118,6 +122,7 @@ button:hover {
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 2vw;
+  overflow-y: scroll;
 }
 
 #overlay {
