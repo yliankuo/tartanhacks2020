@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="lib/jquery-2.2.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/md5.js"></script>
+    <script src="lib/fastclick.min.js"></script>
+    <script src="lib/handlebars-v4.0.11.js"></script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+    <script src="js/index.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/localstorage.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+    <link rel="stylesheet" type="text/css" href="css/me.css">
+  </head>
+  <body>
+
+  	<div style="background: green; width: 90vw; margin-left: 5vw; margin-top: 20vh;">
+  	<h3 style="font-size: 5vh; text-align: center;">Status: OK</h3>
+  	</div>
+
+  	<button class="buttons" style="height: 50vw; width: 50vw; display: block; margin-top: 20vh; margin-left: auto; margin-right: auto;">
+  		<h2 style="color: white; font-size: 60px;">Call!</h2>
+  	</button>
+  	<button class="buttons" style="background: #851e0c; height:20vw; width:20vw; position: absolute; margin-left: 5%;">
+  		<img src="img/baseline_mic_black_18dp.png" style="height: 15vw; width: 15vw; display: block; margin-left:auto; margin-top: auto; margin-right: auto; margin-bottom: auto; filter: invert(100%);">
+  	</button>
+  	<button class="buttons" style="background: #851e0c; height:20vw; width:20vw; position: absolute; margin-left: 75%;">
+  		<img src="img/whistle.png" style="height: 15vw; width: 15vw; display: block; margin-left:auto; margin-top: auto; margin-right: auto; margin-bottom: auto;">
+  	</button>
+
+  </body>
+  <footer data-position="fixed" data-id="home_1" data-tap-toggle="false">
+  	<div data-role="navbar" class="navbar">
+         <ul>
+         	<!-- <a href="" class="ui-icon-user ui-btn-icon-notext inlineIcon" data-transition="none"><span class="ui-icon-edit ui-btn-icon-notext inlineIcon"></span>Me</a> -->
+           <!-- <a href="" data-transition="none"><span class="ui-icon-user ui-btn-icon-notext inlineIcon"></span>Friends</a> -->
+           <li><img src="./img/baseline_person_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/baseline_notifications_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
+         </ul>
+       </div>
+  </footer >
+</html>
