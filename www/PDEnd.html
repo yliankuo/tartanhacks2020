@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="lib/jquery-2.2.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/md5.js"></script>
+    <script src="lib/fastclick.min.js"></script>
+    <script src="lib/handlebars-v4.0.11.js"></script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+    <script src="js/index.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/localstorage.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script> -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/PDEnd.css">
+  </head>
+  <script>
+    function addFriend () {
+      var table = document.getElementById("friends"); 
+      var person = prompt("Enter Code:");
+      if (person != null){
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML = person
+        cell2.innerHTML = "<input type ='image' src='img/newlocation.png', height='50vh', width='50vh'>"
+        cell3.innerHTML = "<img src = 'img/greycircle.png' height='50vh' width='50vh'>"
+      }
+    }
+
+    function submit(lat,lon){
+     var request = $.ajax({
+      type: "GET",
+      dataType: "json",
+      url: "https://api.appery.io/rest/1/code/ae71106c-4bdf-476e-ba80-df3c60f07a27/exec",
+      data: {"cmuId":"yenlink","user":"BORT","location":{"lat": lat,"lon":lon}},
+      timeout: 10000,
+      xhrFields: { withCredentials: false },
+
+      success: function(data) {
+        console.log("SUCCESS");
+        console.log(data);
+      },
+
+      error: function(msg) {
+        console.log(msg)
+      },
+    });
+
+}
+  </script>
+  <body>
+    <button onclick="submit(5, 5);"></button>
+    <div id = "friendTable">
+    <table id ="friends">
+    <col span="1" class="wide">
+    <!-- <tr>
+      <th style = "height:200px;font-size:60px">Name</th>
+      <th></th> 
+      <th></th>
+    </tr> -->
+    <tr>
+      <td>Hugh Janus</td>
+      <td><input type ="image" src="img/newlocation.png", height=50vh, width=50vh></td>
+      <td><img src="img/yellowcircle.png", height=50vh, width=50vh></td>
+    </tr>
+    <tr>
+      <td>Omae wa mou Shindeiru</td>
+      <td><input type ="image" src="img/newlocation.png", height=50vh, width=50vh></td>
+      <td><img src="img/greencircle.png", height=50vh, width=50vh></td>
+    </tr>
+    <tr>
+      <td>Alex Zhong</td>
+      <td><input type ="image" src="img/newlocation.png", height=50vh, width=50vh></td>
+      <td><img src="img/redcircle.png", height=50vh, width=50vh></td>
+    </tr>
+  
+  </table>
+</div>
+  </body>
+</html>
