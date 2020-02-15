@@ -14,13 +14,13 @@
     <script src="js/constants.js"></script>
     <script src="js/localstorage.js"></script>
     <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
-    <link rel="stylesheet" type="text/css" href="css/newscss.css">
+    <link rel="stylesheet" type="text/css" href="css/notifications.css">
     <!--<link rel="stylesheet" href="css/friendlist.css">-->
     <!--<h1 style = "font-size:70px; padding-left:80px;">Friends <input type ="image" src="img/addfrend.png", height=75, width=75 onclick="myFunction()" padding-left=800px> </h1>-->
   </head>
   <body>
     <div id="header">
-      <h1>News <input type ="image" style = "vertical-align: middle;" style="float:right;" src="img/redplus.jpg" onclick="addNews()", height=50vh, width=50vh></h1>
+      <h1>News <input type ="image" style = "vertical-align: middle;" src="img/redplus.jpg" onclick="addNews()", height=50vh, width=50vh></h1>
     </div>
 
   <div id = "newsTable">
@@ -51,12 +51,13 @@
     <div data-role="navbar" class="navbar">
          <ul>
           <!-- <a href="" class="ui-icon-user ui-btn-icon-notext inlineIcon" data-transition="none"><span class="ui-icon-edit ui-btn-icon-notext inlineIcon"></span>Me</a> -->
-           <li><img src="./img/baseline_person_black_18dp.png" style="height: 36px; width: 36px;"></li>
            <!-- <a href="" data-transition="none"><span class="ui-icon-user ui-btn-icon-notext inlineIcon"></span>Friends</a> -->
-           <li><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_notifications_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="me.html">
+            <img src="./img/baseline_person_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="friends.html"><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/notifications2.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="settings.html"><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
          </ul>
        </div>
-  </footer >
+  </footer>
 </html>
