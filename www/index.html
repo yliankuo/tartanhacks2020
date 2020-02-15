@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Skeleton</title>
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/md5.js"></script>
@@ -14,23 +13,17 @@
     <script src="js/constants.js"></script>
     <script src="js/localstorage.js"></script>
     <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script> -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
   <body>
-  	<div id="header">
-  		<h1>Skeleton</h1>
-  	</div>
+    <div class="login">
+      <h1>ScottySecurity</h1>
+      <h2>Username</h2>
+      <input type="text" id="username" name="username">
+      <h2>Password</h2>
+      <input type="password" id="password" name="password">
+      <button onclick=location.href="me2.html">Login</button>
+    </div>
   </body>
-  <footer data-position="fixed" data-id="home_1" data-tap-toggle="false">
-  	<div data-role="navbar" class="navbar">
-         <ul>
-         	<!-- <a href="" class="ui-icon-user ui-btn-icon-notext inlineIcon" data-transition="none"><span class="ui-icon-edit ui-btn-icon-notext inlineIcon"></span>Me</a> -->
-           <li><img src="./img/baseline_person_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <!-- <a href="" data-transition="none"><span class="ui-icon-user ui-btn-icon-notext inlineIcon"></span>Friends</a> -->
-           <li><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_notifications_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
-         </ul>
-       </div>
-  </footer >
 </html>

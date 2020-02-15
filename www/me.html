@@ -14,21 +14,24 @@
     <script src="js/localstorage.js"></script>
     <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
     <link rel="stylesheet" type="text/css" href="css/me.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script> -->
+    <script src="js/me.js"></script>
   </head>
   <body>
 
-  	<div style="background: green; width: 90vw; margin-left: 5vw; margin-top: 20vh;">
-  	<h3 style="font-size: 5vh; text-align: center;">Status: OK</h3>
+  	<div style="background: #35e859; width: 90vw; margin-left: 5vw; margin-top: 20vh; border: solid; border-color: #4ca300; border-width: 2px;" id="bar">
+  	<h3 style="font-size: 5vh; text-align: center;" id="status">Status: OK</h3>
   	</div>
 
-  	<button class="buttons" style="height: 50vw; width: 50vw; display: block; margin-top: 20vh; margin-left: auto; margin-right: auto;">
-  		<h2 style="color: white; font-size: 60px;">Call!</h2>
+  	<button class="buttons ripple" style="height: 50vw; width: 50vw; display: block; margin-top: 15vh; margin-left: auto; margin-right: auto;">
+  		<h2 style="color: white; font-size: 60px;" onclick="mainButton();">Call!</h2>
   	</button>
-  	<button class="buttons" style="background: #851e0c; height:20vw; width:20vw; position: absolute; margin-left: 5%;">
-  		<img src="img/baseline_mic_black_18dp.png" style="height: 15vw; width: 15vw; display: block; margin-left:auto; margin-top: auto; margin-right: auto; margin-bottom: auto; filter: invert(100%);">
+  	<button class="buttons ripple" style="height:20vw; width:20vw; position: absolute; margin-left: 5%;" onclick="recordAudio();">
+  		<img src="img/mic2.png" style="height: 7vw; width: 7vw; display: block; margin-left:auto; margin-top: auto; margin-right: auto; margin-bottom: auto; filter: invert(100%);">
+      <!-- baseline_mic_black_18dp.png -->
   	</button>
-  	<button class="buttons" style="background: #851e0c; height:20vw; width:20vw; position: absolute; margin-left: 75%;">
-  		<img src="img/whistle.png" style="height: 15vw; width: 15vw; display: block; margin-left:auto; margin-top: auto; margin-right: auto; margin-bottom: auto;">
+  	<button class="buttons ripple" style="height:20vw; width:20vw; position: absolute; margin-left: 75%;" onclick="playAudio();">
+  		<img src="img/whistle.png" style="height: 10vw; width: 10vw; display: block; margin-left:auto; margin-top: auto; margin-right: auto; margin-bottom: auto;">
   	</button>
 
   </body>
@@ -37,10 +40,10 @@
          <ul>
          	<!-- <a href="" class="ui-icon-user ui-btn-icon-notext inlineIcon" data-transition="none"><span class="ui-icon-edit ui-btn-icon-notext inlineIcon"></span>Me</a> -->
            <!-- <a href="" data-transition="none"><span class="ui-icon-user ui-btn-icon-notext inlineIcon"></span>Friends</a> -->
-           <li><img src="./img/baseline_person_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_notifications_black_18dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/person2.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="friends.html"><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="notifications.html"><img src="./img/baseline_notifications_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="settings.html"><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
          </ul>
        </div>
   </footer >
