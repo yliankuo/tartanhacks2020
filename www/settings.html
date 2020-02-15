@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Settings</title>
+    <script src="lib/jquery-2.2.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/md5.js"></script>
+    <script src="lib/fastclick.min.js"></script>
+    <script src="lib/handlebars-v4.0.11.js"></script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+    <script src="js/index.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/localstorage.js"></script>
+    <script src="js/settings.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
+  </head>
+  <body>
+  	<div id="header">
+  		<h1 class="headerName">Settings</h1>
+  	</div>
+
+    <div id="myTable">
+      <table id = "list" class=buttons>
+        <tr><td><button type="button" onclick="showFriends()">Current Friends</button>
+        <tr><td><button type="button" onclick="createUserCode()">Generate User Code</button>
+        <tr><td><button type="button">Status Settings</button>
+        <tr><td><button type="button" onclick="exitFromApp();">Log Out</button>
+        <tr><td><button type="button" onclick="on()">About Us</button>
+      </table>
+    </div>
+    
+    <div id="overlay" onclick="off()">
+      <div id="text">We are a group of computer science students interested in school safety and security.  </div>
+    </div>
+
+
+  </body>
+ <footer data-position="fixed" data-id="home_1" data-tap-toggle="false">
+    <div data-role="navbar" class="navbar">
+         <ul>
+          <!-- <a href="" class="ui-icon-user ui-btn-icon-notext inlineIcon" data-transition="none"><span class="ui-icon-edit ui-btn-icon-notext inlineIcon"></span>Me</a> -->
+           <!-- <a href="" data-transition="none"><span class="ui-icon-user ui-btn-icon-notext inlineIcon"></span>Friends</a> -->
+           <li onclick=location.href="me.html"><img src="./img/person2.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="friends.html"><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="notifications.html"><img src="./img/baseline_notifications_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li ><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
+         </ul>
+       </div>
+  </footer >
+</html>
