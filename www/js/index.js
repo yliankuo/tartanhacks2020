@@ -49,4 +49,31 @@ var app = {
 
 app.initialize();
 
+var username = null;
+
+function submitCredentials() {
+    var url = "me.html";
+    location.href = url;
+    username = $('#username').text();
+}
+
+function submit(lat,lon, cmuId, user){
+     var request = $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: "https://api.appery.io/rest/1/code/ae71106c-4bdf-476e-ba80-df3c60f07a27/exec",
+      data: {"cmuId":cmuId,"user":user"location":{"lat": lat,"lon":lon}},
+      timeout: 10000,
+      xhrFields: { withCredentials: false },
+
+      success: function(data) {
+        console.log("SUCCESS");
+      },
+
+      error: function(msg) {
+        console.log(msg)
+      },
+    });
+
+}
 
